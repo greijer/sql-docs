@@ -71,7 +71,9 @@ ms.workload: "On Demand"
     |ALTER INDEX REBUILD.|The action fails.|The action succeeds.|  
     |DROP INDEX.|The action succeeds.|The action succeeds.|  
     |CREATE INDEX WITH DROP_EXISTING.|The action fails.|The action succeeds.|  
-  
+
+-   Rebuilding nonclustered indexes that had data_compression previous to disabling them will not be rebuild using the same compression options. Because disabling nonclustered indexes will clear compression settings metadata.
+
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
